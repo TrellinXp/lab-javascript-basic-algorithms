@@ -49,11 +49,12 @@ console.log(driversnameReverse);
   - `Yo, the navigator goes first definitely.` <br>
   - `What?! You both have the same name?`
 */
+
 for (var count = 0; count < hacker1.length; count++) {
-  var driverCharAt = hacker1.charCodeAt(count) - 65;
-  console.log('Driver Char At ' + driverCharAt);
-  var navigatorCharAt = hacker2.charCodeAt(count) - 65;
-  console.log('Navigator Char At ' + navigatorCharAt);
+  var driverCharAt = hacker1.charCodeAt(count) - 64;
+  //console.log('Driver Char At ' + driverCharAt);
+  var navigatorCharAt = hacker2.charCodeAt(count) - 64;
+  //console.log('Navigator Char At ' + navigatorCharAt);
 
   if (driverCharAt < navigatorCharAt) {
     console.log(`The driver's name goes first.`);
@@ -62,6 +63,8 @@ for (var count = 0; count < hacker1.length; count++) {
     console.log(`Yo, the navigator goes first definitely.`);
     break;
   } else {
-    console.log(`What?! You both have the same name?`);
+    if (count === hacker1.length - 1) {
+      console.log(`What?! You both have the same name?`);
+    }
   }
 }
